@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "joi-to-swagger": "^3.1.0"
+    "joi": "^14.3.1",
+    "joi-to-swagger": "3.1.0",
+    "mongoose": "^5.9.20",
+    "swagger-ui-express": "4.0.7"
   }
 }
