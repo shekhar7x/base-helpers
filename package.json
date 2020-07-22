@@ -1,6 +1,6 @@
 {
   "name": "@s7x/base-helpers",
-  "version": "1.2.15",
+  "version": "1.2.16",
   "description": "helpers ",
   "main": "index.js",
   "scripts": {
