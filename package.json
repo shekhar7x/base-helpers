@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
+  "repository": {
+    "url": "https://github.com/shekhar7x/base-helpers.git"
+  },
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
