@@ -29,14 +29,18 @@ Follow [our installing guide](http://expressjs.com/en/starter/installing.html)
 for more information.
 
 ## Features
-
-  * Robust routing
-  * Focus on high performance
-  * Super-high test coverage
-  * HTTP helpers (redirection, caching, etc)
-  * View system supporting 14+ template engines
-  * Content negotiation
-  * Executable for generating applications quickly
+- A valid OpenAPI (formerly Swagger) spec (2.0 or 3.0 if you choose 😍) is generated from your controllers and models, including:
+  - Paths (e.g. GET /users)
+  - Definitions based on joi schemas
+  - Parameters/model properties marked as required or optional based on joi schemas (e.g. joi.required() string is required in the OpenAPI spec)
+  - jsDoc supported for object descriptions (most other metadata can be inferred from joi types)
+- Routes are generated for middleware of choice
+  - Express, Hapi, and Koa currently supported, other middleware can be supported using a simple handlebars template
+  - Validate request payloads
+- Inter microservice communication 
+  - NATS.io is used for bidirectional requests.
+  - Supports KAFKA for unidirectional message streaming
+- Support for Automatic crud api generation with Mongodb
 
 ## Implementation
 
