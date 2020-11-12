@@ -119,6 +119,32 @@ module.exports = new Controller();
 
 ### Add Api definitions
 
+```js
+const controller = require("./controller");
+const CrudApi = require("@s7x/base-helpers/lib/modules/crud-api");
+const joi = require("joi");
+
+let crudApi = new CrudApi(controller)
+let apiPath = 'companies';
+let schema = {
+    name: joi.string().required(),
+    description: joi.string().allow('').optional(),
+};
+let routes = [
+    crudApi.getCreateApi(schema),
+    crudApi.getFindAllApi({
+        ...validation.paginator
+    }),
+    crudApi.getFindByIdApi(),
+    crudApi.getUpdateByIdApi(schema),
+    crudApi.getreplaceByIdApi(schema),
+    crudApi.getDeleteByIdApi({}, true)
+]
+
+module.exports = { basePath: `/${apiPath}`, routes }
+
+```
+
 
 [npm-image]: https://img.shields.io/npm/v/@s7x/base-helpers
 [npm-url]: https://npmjs.org/package/@s7x/base-helpers
