@@ -66,11 +66,7 @@ config.js
 const { MongoLookup, BaseConfigMongo } = require("@s7x/base-helpers/lib/types");
 
 module.exports = new BaseConfigMongo({
-    findExact: [
-        'name',
-        'description',
-        'outletId'
-    ],
+    findExact: [ 'name', '_id' ],
     searchFields: ['name', 'description'],
     defaultMatch: { isDeleted: false },
     softDeleteKey: 'isDeleted',
