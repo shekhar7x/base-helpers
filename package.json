@@ -6,10 +6,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": {
+    "name": "Shekhar",
+    "email": "shekhar7x@gmail.com"
+  },
   "repository": {
     "url": "https://github.com/shekhar7x/base-helpers.git"
   },
+  "keywords": [
+    "express",
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful",
+    "router",
+    "api",
+    "micro-service",
+    "swagger",
+    "joi"
+  ],
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
