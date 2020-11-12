@@ -7,14 +7,7 @@
   [![Test Coverage][coveralls-image]][coveralls-url]
 
 ```js
-const express = require('express')
-const app = express()
-
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
-
-app.listen(3000)
+const CrudContollerExpress = require('@s7x/base-helpers');
 ```
 
 ## Installation
@@ -29,7 +22,7 @@ Installation is done using the
 [`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
 ```bash
-$ npm install express
+$ npm install @s7x/base-helpers
 ```
 
 Follow [our installing guide](http://expressjs.com/en/starter/installing.html)
@@ -45,7 +38,86 @@ for more information.
   * Content negotiation
   * Executable for generating applications quickly
 
+## Implementation
 
+### Create database model
+```js
+const mongoose = require('mongoose');
+const schema = new mongoose.Schema(
+    {
+        name: { type: String },
+        description: { type: String },
+        isDeleted: { type: Boolean, default: false }
+    },
+    { timestamps: true }
+)
+
+module.exports = mongoose.model('Company', schema);
+```
+
+### Create module 
+
+config.js
+```js
+const { MongoLookup, BaseConfigMongo } = require("@s7x/base-helpers/lib/types");
+
+module.exports = new BaseConfigMongo({
+    findExact: [
+        'name',
+        'description',
+        'outletId'
+    ],
+    searchFields: ['name', 'description'],
+    defaultMatch: { isDeleted: false },
+    softDeleteKey: 'isDeleted',
+    mapping: {},
+    uniqueKeys: ['name'],
+    lookups: [
+        new MongoLookup({
+            name: 'branches',
+            from: 'branches',
+            as: 'branchesData',
+            localField: '_id',
+            foreignField: 'branchId',
+            multi: true
+        }),
+    ],
+    defaultSortDirection: -1,
+    defaultSortKey: 'updatedAt',
+});
+
+```
+index.js
+```js
+const { BaseMongo } = require("@s7x/base-helpers/lib/modules");
+const config = require("./config");
+const  Company = require('../../models/mongo/company');
+
+class Module extends BaseMongo {
+    constructor() {
+        super(Company, config);
+    }
+}
+
+module.exports = new Module();
+
+```
+### Add Controller
+
+```js
+const mainModule = require('../../modules/company');
+const CrudContollerExpress = require('@s7x/base-helpers/lib/modules/crud-controller-express');
+
+class Controller extends CrudContollerExpress {
+    constructor() {
+        super(mainModule);
+    }
+}
+
+module.exports = new Controller();
+```
+
+### Add Api definitions
 
 
 [npm-image]: https://img.shields.io/npm/v/@s7x/base-helpers
