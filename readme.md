@@ -48,10 +48,10 @@ for more information.
 
 
 
-[npm-image]: https://img.shields.io/npm/v/express.svg
-[npm-url]: https://npmjs.org/package/express
-[downloads-image]: https://img.shields.io/npm/dm/express.svg
-[downloads-url]: https://npmjs.org/package/express
+[npm-image]: https://img.shields.io/npm/v/@s7x/base-helpers
+[npm-url]: https://npmjs.org/package/@s7x/base-helpers
+[downloads-image]: https://img.shields.io/npm/dm/@s7x/base-helpers.svg
+[downloads-url]: https://npmjs.org/package/@s7x/base-helpers
 [travis-image]: https://img.shields.io/travis/expressjs/express/master.svg?label=linux
 [travis-url]: https://travis-ci.org/expressjs/express
 [appveyor-image]: https://img.shields.io/appveyor/ci/dougwilson/express/master.svg?label=windows
