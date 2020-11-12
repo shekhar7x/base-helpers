@@ -10,7 +10,9 @@
     "name": "Shekhar",
     "email": "shekhar7x@gmail.com"
   },
+  "homepage": "https://github.com/shekhar7x/base-helpers.git",
   "repository": {
+    "type": "git",
     "url": "https://github.com/shekhar7x/base-helpers.git"
   },
   "keywords": [
