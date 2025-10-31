@@ -146,6 +146,10 @@ module.exports = { basePath: `/${apiPath}`, routes }
 ```
 
 
+## Acknowledgments
+
+Special thanks to [Zecocenter](https://github.com/zecocenter) for their contributions and support to this project.
+
 [npm-image]: https://img.shields.io/npm/v/@s7x/base-helpers
 [npm-url]: https://npmjs.org/package/@s7x/base-helpers
 [downloads-image]: https://img.shields.io/npm/dm/@s7x/base-helpers.svg
