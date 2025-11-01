@@ -1,0 +1,3 @@
+This is a test file for Write Tool testing.
+Line 2: Successfully edited with Edit Tool!
+Line 3: Verifying file creation works correctly.
