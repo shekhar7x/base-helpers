@@ -1,0 +1,18 @@
+File: hello.txt
+Lines: 40000
+Size: 378769 bytes
+Greeting counts:
+Hi there: 2847
+Hi: 2898
+Good afternoon: 2860
+Salutations: 2794
+Yo: 2900
+Hey buddy: 2837
+Hey: 2844
+Good morning: 2865
+Greetings friend: 2742
+Hello: 2880
+Good evening: 2951
+Hello world: 2852
+Greetings: 2868
+Howdy: 2862
