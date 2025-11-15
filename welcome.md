@@ -1,0 +1,1 @@
+Welcome to @s7x/base-helpers - a powerful framework for automatic CRUD API generation with MongoDB, OpenAPI spec generation, and inter-microservice communication support!
