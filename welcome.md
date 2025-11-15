@@ -1,0 +1,1 @@
+# Welcome to @s7x/base-helpers - Fast, minimalist Node.js framework helpers for building robust REST APIs with MongoDB! 🚀
