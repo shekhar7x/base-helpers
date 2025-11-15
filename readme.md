@@ -1,5 +1,7 @@
   Fast, unopinionated, minimalist web framework for [node](http://nodejs.org).
 
+**Read this in other languages:** [हिंदी](README.hi.md)
+
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][downloads-url]
   [![Linux Build][travis-image]][travis-url]
